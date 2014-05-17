@@ -35,12 +35,10 @@
 			if (data == null || data == "") {
 				alert("No meeting is scheduled");
 			} else {
-				popupWin = window.open(data, 'Meeting');
-				if (popupWin == null)
-    				alert("Turn off your pop-up blocker!");
+				var popupWin = window.open(data, 'Meeting');
+				if (popupWin == null) 
+    				location.href = data;
     		}
-
-			//location.href = data;
 		}
 		function joinMeeting() {
 			jQuery.ajax({
